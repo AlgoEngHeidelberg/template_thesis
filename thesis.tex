@@ -1,0 +1,173 @@
+\documentclass[a4paper,12pt,bibtotoc,titlepage, liststotoc,BCOR7mm,headsepline,pointlessnumbers]{scrbook}
+\usepackage[numbers]{natbib} 
+\usepackage[english]{babel}
+%SHOW COMMENTS
+\newcommand{\mycomment}[1]{\color{red}[COMMENT/TODO: \textbf{#1}]\color{black}}
+%DONT SHOW COMMENTS
+\renewcommand*{\chapterpagestyle}{useheadings}
+%% Anpassen: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\upbautor}{Your Name} % Name des Autors
+\newcommand{\upbtitel}{Title of Your Theis} % Titel der Arbeit
+\newcommand{\upbtyp}{Bachelor Thesis} % Bachelor oder Master 
+\newcommand{\upbmatrikelnr}{1232808} % Matrikelnummer
+\newcommand{\upbemail}{youremail@mail.com} % E-Mail des Autors
+\newcommand{\upbzweitgutachter}{TODO} % Namen der Betreuer
+\newcommand{\upbdate}{\today} % Datum auf der Arbeit (\today fügt das aktuelle Datum ein)
+\newcommand{\E}{\mbox{I\negthinspace E}}
+\usepackage{times}
+
+\usepackage[ansinew]{inputenc} % Zeichenkodierung
+\usepackage[T1]{fontenc} % Trennung von Wörtern mit Umlauten
+\usepackage{natbib} % BibTeX
+\usepackage[algo2e, german, ruled, vlined]{algorithm2e}
+\usepackage{algorithm}
+
+\usepackage{array}
+\usepackage{amsfonts} % Mathematische Zeichen
+\usepackage{amssymb}  % Mathematische Zeichen
+\usepackage{scrpage2} % Koma für Kopfzeilen
+\usepackage{color}    % Farbiger Text
+\usepackage{graphicx} % Funktionen zum Einfügen von Bildern
+\usepackage{graphics}
+\usepackage[plainpages=false,pdfpagelabels=false,citecolor=Black, linkcolor=Black]{hyperref} %Verweise werden Links im PDF
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage{sectsty}
+\usepackage{listings}
+\usepackage{verbatim}
+
+\usepackage{theorem} % Theorem-Optionen
+\theoremstyle{break} % Zeilenumbruch nach Theorem
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+
+\lstset { columns=fixed, basicstyle=\footnotesize \ttfamily, tabsize=2,
+keywordstyle=\color[rgb]{0.00,0.00,0.50}{}\bfseries, commentstyle=\color[rgb]{0.00,0.50,0.25}{},
+showstringspaces=false, numbers=left, numberstyle=\tiny, numbersep=10pt, xleftmargin=20pt,
+language=JAVA }
+
+\hypersetup{colorlinks=false,linkcolor=Black}
+\definecolor{Black}{rgb}{0.0,0.0,0.5}
+\newenvironment{code}{\begingroup\footnotesize \verbatim}{\endverbatim\endgroup}
+
+%========================= Eigene Konfigurationen =====================================
+\def\MdR{\ensuremath{\mathbb{R}}}
+\def\MdN{\ensuremath{\mathbb{N}}}
+%======================================================================================
+\parindent 0 cm
+\sloppy
+
+\typearea[current]{current}
+\pagestyle{scrheadings} 
+
+\addtokomafont{caption}{\small} % Aktive Auszeichnung von Legenden
+\setkomafont{captionlabel}{\sffamily\bfseries}
+\bibliographystyle{plain}
+
+
+\title{\upbtitel}
+\author{
+\upbautor
+}
+\publishers{{\normalsize Supervisors:}
+\upbbetreuer
+}
+\date{\upbdate}
+
+\renewcommand{\thepage}{\roman{page}}
+\usepackage[ ]{titlesec} 
+\titleformat{\chapter}[display]
+  { \normalsize \huge  \color{black}}
+  {\flushright \normalsize \MakeUppercase { \chaptertitlename \hspace{1 ex} }  { \fontsize{60}{60}\selectfont \sffamily  \thechapter }} {10 pt}{\bfseries\huge}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{-0.75cm}
+{\bf{ \huge{\upbtitel} }} \\
+
+\vspace*{1.0cm}
+
+
+\large{\upbautor}  \\
+\vspace*{0.5cm}
+\Large{\today}\\
+\vspace*{0.5cm}
+\upbmatrikelnr \\
+\vspace*{1.0cm}
+\upbtyp\\
+\vspace*{0.25cm}
+\normalsize
+at \\
+\vspace*{0.25cm}
+Algorithm Engineering Group Heidelberg \\
+Heidelberg University \\
+\vspace*{0.25cm}
+
+\vspace*{0.75cm}
+\begin{center}
+You can insert a fancy image from your thesis here or remove this block.
+\end{center}
+\vspace*{0.5cm}
+
+Supervisor:\\
+Univ.-Prof. PD. Dr. rer. nat. Christian Schulz \\
+ 
+\vspace*{0.50cm}
+Co-Referee: \\
+ \upbzweitgutachter               
+%\end{tabular}
+
+\end{center}
+\end{titlepage}
+
+\chapter*{Acknowledgments}
+TODO
+
+\vspace*{\fill}
+
+
+Ich erkläre hiermit, dass ich die vorliegende Arbeit selbständig verfasst und keine anderen als
+die angegebenen Quellen und Hilfsmittel verwendet habe. \\ \\
+Karlsruhe, \today \\ \\  \\
+
+
+
+Your Name
+
+\pagebreak
+	
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+	
+	\tableofcontents
+	
+	\mainmatter
+	\newpage
+\chapter{Introduction}
+\section{Motivation}
+\section{Our Contribution}
+\section{Structure}
+The remainder of this thesis is organized as follows.
+	\newpage
+\chapter{Fundamentals}
+\section{General Definitions}
+\chapter{Related Work}
+\chapter{Name The Chapter, This is Your Core Chapter}
+\chapter{Experimental Evaluation}
+\chapter{Discussion}
+\section{Conclusion}
+\section{Future Work}
+\appendix
+\chapter*{Implementation Details}
+\chapter*{Command-Line Arguments}
+\chapter*{Further Results}
+\chapter*{Zusammenfassung}
+\addcontentsline{toc}{chapter}{Abstract (German)}
+\newpage
+\backmatter
+\bibliographystyle{natbib}
+\bibliography{quellen}
+
+\end{document}
