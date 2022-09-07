@@ -7,17 +7,17 @@
 \renewcommand*{\chapterpagestyle}{useheadings}
 %% Anpassen: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\upbautor}{Your Name} % Name des Autors
-\newcommand{\upbtitel}{Title of Your Theis} % Titel der Arbeit
+\newcommand{\upbtitel}{Title of Your Thesis} % Titel der Arbeit
 \newcommand{\upbtyp}{Bachelor Thesis} % Bachelor oder Master 
 \newcommand{\upbmatrikelnr}{1232808} % Matrikelnummer
 \newcommand{\upbemail}{youremail@mail.com} % E-Mail des Autors
 \newcommand{\upbzweitgutachter}{TODO} % Namen der Betreuer
-\newcommand{\upbdate}{\today} % Datum auf der Arbeit (\today fügt das aktuelle Datum ein)
+\newcommand{\upbdate}{\today} % Datum auf der Arbeit (\today fï¿½gt das aktuelle Datum ein)
 \newcommand{\E}{\mbox{I\negthinspace E}}
 \usepackage{times}
 
 \usepackage[ansinew]{inputenc} % Zeichenkodierung
-\usepackage[T1]{fontenc} % Trennung von Wörtern mit Umlauten
+\usepackage[T1]{fontenc} % Trennung von Wï¿½rtern mit Umlauten
 \usepackage{natbib} % BibTeX
 \usepackage[algo2e, german, ruled, vlined]{algorithm2e}
 \usepackage{algorithm}
@@ -25,9 +25,9 @@
 \usepackage{array}
 \usepackage{amsfonts} % Mathematische Zeichen
 \usepackage{amssymb}  % Mathematische Zeichen
-\usepackage{scrpage2} % Koma für Kopfzeilen
+\usepackage{scrlayer-scrpage} % Komma fÃ¼r Kopfzeilen
 \usepackage{color}    % Farbiger Text
-\usepackage{graphicx} % Funktionen zum Einfügen von Bildern
+\usepackage{graphicx} % Funktionen zum Einfï¿½gen von Bildern
 \usepackage{graphics}
 \usepackage[plainpages=false,pdfpagelabels=false,citecolor=Black, linkcolor=Black]{hyperref} %Verweise werden Links im PDF
 \usepackage{url}
@@ -47,7 +47,7 @@ keywordstyle=\color[rgb]{0.00,0.00,0.50}{}\bfseries, commentstyle=\color[rgb]{0.
 showstringspaces=false, numbers=left, numberstyle=\tiny, numbersep=10pt, xleftmargin=20pt,
 language=JAVA }
 
-\hypersetup{colorlinks=false,linkcolor=Black}
+\hypersetup{colorlinks=false,linkcolor=Black, pdfborder={1 1 0.1}}
 \definecolor{Black}{rgb}{0.0,0.0,0.5}
 \newenvironment{code}{\begingroup\footnotesize \verbatim}{\endverbatim\endgroup}
 
@@ -128,13 +128,13 @@ TODO
 \vspace*{\fill}
 
 
-Ich erkläre hiermit, dass ich die vorliegende Arbeit selbständig verfasst und keine anderen als
+Ich erkl\"are hiermit, dass ich die vorliegende Arbeit selbst\"andig verfasst und keine anderen als
 die angegebenen Quellen und Hilfsmittel verwendet habe. \\ \\
-Karlsruhe, \today \\ \\  \\
+Heidelberg, \today \\ \\  \\
 
 
 
-Your Name
+\upbauthor
 
 \pagebreak
 	
@@ -163,7 +163,7 @@ The remainder of this thesis is organized as follows.
 \chapter*{Implementation Details}
 \chapter*{Command-Line Arguments}
 \chapter*{Further Results}
-\chapter*{Zusammenfassung}
+\chapter*{Summary}
 \addcontentsline{toc}{chapter}{Abstract (German)}
 \newpage
 \backmatter
